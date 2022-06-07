@@ -51,7 +51,9 @@
                 "install -d $FLATPAK_DEST/share/surge-xt",
                 "cp -a resources/data/* $FLATPAK_DEST/share/surge-xt",
                 "strip $FLATPAK_DEST/vst3/*.vst3/Contents/$(arch)-linux/*.so",
-                "install -Dm644 -t $FLATPAK_DEST/share/licenses/surge-xt LICENSE"
+                "install -Dm644 -t $FLATPAK_DEST/share/licenses/surge-xt LICENSE",
+                "mkdir -p $FLATPAK_DEST/share/icons/hicolor/scalable/apps",
+                "install -m0644 resources/assets/Logo/SVG/surge_icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/org.freedesktop.LinuxAudio.Plugins.Surge-XT.svg"
             ],
             "sources": [
                 {
